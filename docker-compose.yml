@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+    web:
+        image: python:3.7.6-alpine
+        container_name: capital_earning
+        #build: .
+        command: >
+            sh -c "cd code && python capital_earning.py < input.txt"
+        volumes:
+            - .:/code
